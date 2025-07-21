@@ -6,5 +6,9 @@ import { WinnersComponent } from './pages/winners/winners.component';
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'games', component: AllGamesComponent },
-  { path: 'winners', component: WinnersComponent },
+ {
+  path: 'winners',
+  loadComponent: () => import('./pages/winners/winners.component').then(m => m.WinnersComponent)
+}
+,
 ];

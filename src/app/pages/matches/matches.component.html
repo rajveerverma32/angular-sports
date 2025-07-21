@@ -1,0 +1,13 @@
+<div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; padding: 16px;">
+  <mat-card *ngFor="let match of matches" style="width: 320px;">
+    <img mat-card-image [src]="match.image" alt="Match Image" />
+    <mat-card-header>
+      <mat-card-title>{{ match.title }}</mat-card-title>
+      <mat-card-subtitle>{{ match.date }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p><strong>Score:</strong> {{ match.score }}</p>
+      <p><strong>Winner:</strong> {{ match.winner }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>

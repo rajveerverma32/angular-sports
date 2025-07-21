@@ -1,0 +1,12 @@
+<div class="honours-container">
+  <mat-card *ngFor="let honour of honours" class="honour-card">
+    <img mat-card-image [src]="honour.image" alt="{{ honour.player }}" />
+    <mat-card-header>
+      <mat-card-title>{{ honour.title }}</mat-card-title>
+      <mat-card-subtitle>{{ honour.player }} - {{ honour.year }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{ honour.description }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>

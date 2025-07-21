@@ -1,24 +1,25 @@
-<nav class="bg-white shadow-md px-4 py-3 flex items-center justify-between">
-  <div class="text-2xl font-bold text-blue-600">MyApp</div>
-  <div class="space-x-4 hidden md:flex">
-    <a href="#" class="text-gray-700 hover:text-blue-500 font-medium">Home</a>
-    <a href="#" class="text-gray-700 hover:text-blue-500 font-medium">About</a>
-    <a href="#" class="text-gray-700 hover:text-blue-500 font-medium">Services</a>
-    <a href="#" class="text-gray-700 hover:text-blue-500 font-medium">Contact</a>
-    
-  </div>
-  <div class="md:hidden">
-    <!-- Mobile Menu Button -->
-    <button (click)="toggleMenu()" class="text-gray-700 focus:outline-none">
-      ☰
-    </button>
-  </div>
-</nav>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #sidenav mode="over" class="sidenav">
 
-<!-- Mobile Menu (only visible when toggled) -->
-<div *ngIf="menuOpen" class="md:hidden px-4 pb-4 space-y-2">
-  <a href="#" class="block text-gray-700 hover:text-blue-500 font-medium">Home</a>
-  <a href="#" class="block text-gray-700 hover:text-blue-500 font-medium">About</a>
-  <a href="#" class="block text-gray-700 hover:text-blue-500 font-medium">Services</a>
-  <a href="#" class="block text-gray-700 hover:text-blue-500 font-medium">Contact</a>
-</div>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/" (click)="closeMenu()">Home</a>
+      <a mat-list-item routerLink="/games" (click)="closeMenu()">All Games</a>
+      <a mat-list-item routerLink="/ongoing" (click)="closeMenu()">Ongoing Games</a>
+      <a mat-list-item routerLink="/winners" (click)="closeMenu()">Winners</a>
+      <a mat-list-item routerLink="/matches" (click)="closeMenu()">Matches</a>
+      <a mat-list-item routerLink="/honours" (click)="closeMenu()">Honours</a>
+      <a mat-list-item routerLink="/galleries" (click)="closeMenu()">Galleries</a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button mat-icon-button (click)="toggleMenu()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Sports Website</span>
+    </mat-toolbar>
+
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
