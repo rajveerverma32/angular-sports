@@ -1,0 +1,22 @@
+.container {
+  padding: 24px;
+}
+
+.games-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.game-card {
+  width: 300px;
+}
+
+mat-card-header {
+  padding: 16px;
+}
+
+mat-card-content {
+  padding: 0 16px 16px;
+}

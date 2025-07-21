@@ -1,0 +1,19 @@
+<div class="container mat-typography">
+  <h1 class="mat-display-1">All Games</h1>
+
+  <div class="games-grid">
+    <mat-card *ngFor="let game of games" class="game-card">
+      <img mat-card-image [src]="game.image" alt="{{ game.name }}">
+      <mat-card-header>
+        <mat-card-title>{{ game.name }}</mat-card-title>
+        <mat-card-subtitle>{{ game.location }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ game.description }}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-flat-button color="primary">Learn More</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

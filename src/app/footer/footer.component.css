@@ -1,0 +1,14 @@
+.footer-toolbar {
+  justify-content: space-between;
+  padding: 0 16px;
+  font-size: 14px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.contact-info a {
+  color: white;
+  margin : center;
+}

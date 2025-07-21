@@ -1,0 +1,13 @@
+<div class="container mat-typography">
+  <h1 class="mat-display-1">Winners</h1>
+
+  <mat-list>
+    <mat-list-item *ngFor="let winner of winners; let i = index"
+                   class="winner-item"
+                   [@scrollAnimation]="inViewStates[i]">
+      <mat-icon mat-list-icon>emoji_events</mat-icon>
+      <div mat-line class="winner-name">{{ winner.name }}</div>
+      <div mat-line class="winner-sport">{{ winner.game }}</div>
+    </mat-list-item>
+  </mat-list>
+</div>
